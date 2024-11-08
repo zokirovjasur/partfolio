@@ -1,0 +1,377 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  color: #dcdcdc; /* Lighter gray text */
+  background-color: #1a1a1a; /* Dark background */
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/* Navbar */
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Darker navbar */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+nav a {
+  color: #dcdcdc; /* Light gray text */
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #e74c3c; /* Brighter red (like Gmail's red) */
+}
+
+/* Content Sections */
+.content-section {
+  padding: 5rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f39c12; /* Gold color for headings */
+}
+
+/* About Section */
+.about-content.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  border: 5px solid purple; /* Gold border for profile picture */
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #dcdcdc; /* Light gray text */
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+.project-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  background: #2c2c2c; /* Dark background for project cards */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger hover effect */
+}
+
+.project h3 {
+  font-size: 1.3rem;
+  color: #f39c12; /* Gold for project title */
+}
+
+/* Projects Section Heading Styling */
+#projects h2 {
+  font-family: "Roboto", sans-serif; /* Using a clean, modern font */
+  font-size: 2.5rem; /* Larger font size for better visibility */
+  color: #f39c12; /* Gold color for the heading */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  font-weight: bold; /* Make the font bold */
+  text-align: center; /* Center the heading */
+  margin-bottom: 2rem; /* Add space below the heading */
+  letter-spacing: 2px; /* Slightly increase letter spacing for a polished look */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+/* Project Titles (h3) */
+.project h3 {
+  font-family: "Arial", sans-serif; /* Clean font for the title */
+  font-size: 1.2rem; /* Slightly smaller font size */
+  color: #f39c12; /* Gold color for the project titles */
+  font-weight: bold; /* Bold the text */
+  padding: 0.8rem; /* Reduced padding */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 0.8px; /* Slightly reduce letter spacing */
+  text-align: center; /* Center the title */
+  border-bottom: 2px solid #f39c12; /* Border under the title */
+}
+
+/* Project Descriptions (p) */
+.project p {
+  font-family: "Roboto", sans-serif; /* Use a modern sans-serif font for description */
+  font-size: 0.9rem; /* Smaller font for descriptions */
+  color: #dcdcdc; /* Light gray color for description text */
+  line-height: 1.5; /* Slightly tighter line height */
+  padding: 0 1rem 0.8rem; /* Adjust padding around the description */
+  text-align: justify; /* Justify the text */
+}
+
+/* Project Card Hover Effect */
+.project:hover {
+  transform: translateY(-6px); /* Slight hover movement */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Lighter shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Social Icons Section */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between icons */
+  padding: 2rem 0;
+}
+
+.social-icons a {
+  font-size: 2.5rem; /* Increase icon size */
+  color: #dcdcdc; /* Light gray color for icons */
+  transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #f39c12; /* Gold color on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+.social-icons i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Responsive design: Smaller screen sizes */
+@media (max-width: 768px) {
+  .social-icons {
+    gap: 1rem; /* Reduce the gap between icons */
+  }
+
+  .social-icons a {
+    font-size: 2rem; /* Slightly smaller icons on smaller screens */
+  }
+}
+
+/* Style for the phone number link */
+.phone-link {
+  color: #f39c12; /* Gold color for the phone number */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the phone number bold */
+  font-size: 1.1rem; /* Adjust font size */
+}
+
+.phone-link:hover {
+  color: #e74c3c; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: #f39c12; /* Gold color for headings */
+  margin-bottom: 1.5rem;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  color: #dcdcdc; /* Light gray text */
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+#contact a {
+  color: #dcdcdc; /* Light gray */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  color: #f39c12; /* Gold color on hover */
+  text-decoration: underline;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: #dcdcdc;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e74c3c; /* Red color on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/*/* Study Section */
+#study {
+  background-color: #1a1a1a; /* Dark background to match the site theme */
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#study h2 {
+  font-size: 2.5rem;
+  color: #f39c12; /* Gold color for headings */
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+#study h2:after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 3px;
+  background-color: #f39c12;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Study List */
+.study-list {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.study-item {
+  background: linear-gradient(
+    145deg,
+    #2e2e2e,
+    #252525
+  ); /* Subtle gradient for modern look */
+  width: 300px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  position: relative;
+  color: #dcdcdc;
+}
+
+.study-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 12px;
+}
+
+.study-item:hover::before {
+  opacity: 0.1;
+}
+
+.study-item:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.study-item h3 {
+  font-size: 1.4rem;
+  color: #f39c12; /* Gold color for the title */
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.study-item p {
+  font-size: 1rem;
+  color: #dcdcdc;
+  line-height: 1.6;
+  text-align:left;
+  margin-top: 10px;
+}
+
+.study-item p::first-letter {
+  font-size: 1.2rem;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .study-list {
+    gap: 1.5rem;
+  }
+
+  .study-item {
+    width: 90%;
+  }
+
+  #study h2 {
+    font-size: 2rem;
+  }
+}
